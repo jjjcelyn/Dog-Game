@@ -1,0 +1,29 @@
+var bChange = document.getElementById("buttonChange");
+
+var dogEyes = ["dog1e.jpg","doge2.jpg","doge3.jpg","doge4.jpg"]; 
+var dogNose = ["dog1n.jpg","dogn2.jpg","dogn3.jpg","dogn4.jpg"]; 
+var dogBody = ["dog1b.jpg","dogb2.jpg","dogb3.jpg","dogb4.jpg"]; 
+
+var index = 0;
+
+function changeImage(id) {
+	var mainImage = document.getElementById(id);
+	
+	switch (id) {
+        case 'flipEye':
+            mainImage.setAttribute("src", dogEyes[index]);
+            break;
+        case 'flipNose':
+            mainImage.setAttribute("src", dogNose[index]);
+            break;
+        case 'flipBody':
+            mainImage.setAttribute("src", dogBody[index]);
+            break;
+            
+        default:
+}
+	index++;
+	if(index >= 4) {
+	index = 0;
+}
+}
